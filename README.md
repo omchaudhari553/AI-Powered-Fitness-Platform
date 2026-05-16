@@ -2,184 +2,206 @@
 
 # 💪 AI-Powered Fitness Platform
 
-### Smart Fitness & Wellness Management System
+### Smart Fitness Platform — Microservices Architecture
 
-A full-stack AI-powered fitness platform that helps users manage workouts, track health progress, and receive personalized fitness recommendations. Built with Spring Boot microservices architecture, secure authentication, event-driven communication, and a modern React frontend.
+> A full-scale, cloud-native fitness management platform built using **Spring Boot microservices**. Demonstrates distributed systems design, event-driven communication, secure authentication, and modern DevOps practices.
 
 <br/>
 
-![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apachekafka&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+<img src="https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+<img src="https://img.shields.io/badge/Spring_Boot-3.2-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
+<img src="https://img.shields.io/badge/Apache_Kafka-3.x-231F20?style=for-the-badge&logo=apachekafka&logoColor=white"/>
+<img src="https://img.shields.io/badge/Keycloak-OAuth2-4A4A55?style=for-the-badge&logo=keycloak&logoColor=white"/>
+<img src="https://img.shields.io/badge/MongoDB-6.0-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"/>
+
+<br/><br/>
 
 </div>
 
 ---
 
-## 📌 Project Overview
+## 📌 Repository Description
 
-AI-Powered Fitness Platform is a cloud-ready microservices application designed to provide personalized fitness guidance, workout management, and health tracking. The platform integrates AI capabilities for smart recommendations, secure authentication using Keycloak, and scalable communication through Apache Kafka.
-
----
-
-## ✨ Features
-
-| Module | Description |
-|---|---|
-| 🔐 Authentication | Secure login/signup using Keycloak and OAuth2 |
-| 👤 User Profile | Manage personal fitness details and goals |
-| 🏋️ Workout Management | Track workouts, schedules, and activity |
-| 🥗 Nutrition Tracking | Monitor meal plans and calorie intake |
-| 🤖 AI Recommendations | Personalized fitness suggestions using Google API |
-| 📩 Event Streaming | Kafka-based async communication |
-| 🌐 API Gateway | Centralized routing for all services |
-| 🔍 Service Discovery | Eureka Server for microservices registration |
-
----
-
-## 🛠 Tech Stack
-
-### Backend
-- :contentReference[oaicite:0]{index=0}
-- :contentReference[oaicite:1]{index=1}
-- :contentReference[oaicite:2]{index=2}
-- OAuth2
-- API Gateway
-- :contentReference[oaicite:3]{index=3}
-
-### Frontend
-- :contentReference[oaicite:4]{index=4}
-
-### Databases
-- :contentReference[oaicite:5]{index=5}
-- :contentReference[oaicite:6]{index=6}
-
-### DevOps / Tools
-- :contentReference[oaicite:7]{index=7}
-- :contentReference[oaicite:8]{index=8}
-- :contentReference[oaicite:9]{index=9}
-- :contentReference[oaicite:10]{index=10} API Key
+> **AI-Powered Fitness Platform** is a microservices-based fitness management platform built using **Java 17**, **Spring Boot 3.2**, and secure distributed architecture. The system features multiple independent services communicating via **API Gateway** and **Apache Kafka**, with full **OAuth2 authentication using Keycloak**, database integration, and **Docker Compose** orchestration.
 
 ---
 
 ## 📦 Microservices
 
-| Service | Port | Responsibility |
-|---|---|---|
-| API Gateway | 8080 | Entry point for client requests |
-| Eureka Server | 8761 | Service registry |
-| Auth Service | 8081 | Authentication via Keycloak |
-| User Service | 8082 | User profile management |
-| Workout Service | 8083 | Workout management |
-| Nutrition Service | 8084 | Nutrition tracking |
-| AI Service | 8085 | AI recommendations |
+| # | Service | Port | Responsibility | Key Tech |
+|---|---------|------|----------------|----------|
+| 1 | **API Gateway** | 8080 | Single entry point, request routing | API Gateway |
+| 2 | **Eureka Server** | 8761 | Service discovery & registration | Eureka |
+| 3 | **Auth Service** | 8081 | Login, signup, OAuth2 security | Keycloak, OAuth2 |
+| 4 | **User Service** | 8082 | User profiles and health details | MySQL |
+| 5 | **Workout Service** | 8083 | Workout plans and activity tracking | MongoDB |
+| 6 | **Nutrition Service** | 8084 | Diet and nutrition records | MongoDB |
+| 7 | **AI Recommendation Service** | 8085 | AI-based workout and diet suggestions | Google API |
+| 8 | **Notification Service** | 8086 | Event-based notifications | Kafka |
+
+------
+
+## 🛠 Tech Stack
+
+<table>
+<tr><td><strong>Core</strong></td><td>Java 17, Spring Boot 3.2, Maven</td></tr>
+<tr><td><strong>Microservices</strong></td><td>API Gateway, Eureka Server</td></tr>
+<tr><td><strong>Security</strong></td><td>Keycloak, OAuth2</td></tr>
+<tr><td><strong>Messaging</strong></td><td>Apache Kafka (async events)</td></tr>
+<tr><td><strong>Persistence</strong></td><td>MongoDB, MySQL</td></tr>
+<tr><td><strong>Frontend</strong></td><td>React.js</td></tr>
+<tr><td><strong>DevOps</strong></td><td>Docker, Docker Compose</td></tr>
+<tr><td><strong>Tools</strong></td><td>Postman, IntelliJ IDEA, Google API Key</td></tr>
+</table>
 
 ---
 
-## 🚀 Getting Started
+## 🗃 Database Design
 
-### Clone Repository
-
-```bash
-git clone https://github.com/your-username/ai-powered-fitness-platform.git
-cd ai-powered-fitness-platform
-```
-
----
-
-### Backend Setup
-
-```bash
-mvn clean install
-docker-compose up
-```
-
----
-
-### Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
-Frontend runs at:
+Each service owns its own database schema:
 
 ```text
-http://localhost:3000
+ user_db
+ └── users              (id, name, email, password, role)
+
+ workout_db
+ └── workouts           (id, user_id, type, duration, calories)
+
+ nutrition_db
+ └── meals              (id, user_id, food_name, calories, protein, carbs, fats)
+
+ ai_db
+ └── recommendations    (id, user_id, workout_plan, meal_plan)
+
+ notification_db
+ └── notifications      (id, user_id, message, status)
 ```
 
-Backend gateway:
+---
 
+## 🌐 Service URLs
+
+| Portal | URL |
+|--------|-----|
+| 🔀 API Gateway | http://localhost:8080 |
+| 🗂 Eureka Dashboard | http://localhost:8761 |
+| 📋 Auth Service | http://localhost:8081 |
+| 📋 Workout Service | http://localhost:8083 |
+| 📋 Nutrition Service | http://localhost:8084 |
+
+---
+
+## 🔐 Authentication & Authorization
+
+### Roles
+
+| Role | Permissions |
+|------|-------------|
+| `USER` | Manage workouts, nutrition, AI suggestions |
+| `ADMIN` | Full platform access |
+
+### Auth Flow
+
+```bash
+# 1. Register
+curl -X POST http://localhost:8080/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "Secure@1234"
+  }'
+
+# 2. Login → receive token
+curl -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"john@example.com","password":"Secure@1234"}'
+
+# 3. Use token in requests
+curl http://localhost:8080/api/workouts \
+  -H "Authorization: Bearer <your_token>"
+```
+
+---
+
+## 📖 API Documentation
+
+### Core Endpoints
+
+#### Workouts
 ```text
-http://localhost:8080
+GET    /api/workouts              → Get user workouts
+POST   /api/workouts              → Create workout
+PUT    /api/workouts/{id}         → Update workout
+DELETE /api/workouts/{id}         → Delete workout
+```
+
+#### Nutrition
+```text
+GET    /api/nutrition             → Get meal records
+POST   /api/nutrition             → Add meal entry
+PUT    /api/nutrition/{id}        → Update meal
+DELETE /api/nutrition/{id}        → Delete meal
+```
+
+#### AI Recommendations
+```text
+GET    /api/ai/workout-plan       → AI workout plan
+GET    /api/ai/diet-plan          → AI diet plan
 ```
 
 ---
 
-## 🌐 API Endpoints
+## 🧪 Testing
 
-### Authentication
+```bash
+# Run all unit tests
+mvn test
 
-```http
-POST /api/auth/login
-POST /api/auth/register
+# Run tests for specific service
+cd auth-service && mvn test
+cd workout-service && mvn test
+cd nutrition-service && mvn test
+cd ai-service && mvn test
 ```
 
-### Workouts
+**Test coverage includes:**
+- ✅ `AuthServiceTest`
+- ✅ `WorkoutServiceTest`
+- ✅ `NutritionServiceTest`
+- ✅ `AiServiceTest`
 
-```http
-GET    /api/workouts
-POST   /api/workouts
-PUT    /api/workouts/{id}
-DELETE /api/workouts/{id}
-```
+---
 
-### Nutrition
+## 🏛 Architecture Patterns
 
-```http
-GET    /api/nutrition
-POST   /api/nutrition
-```
+| Pattern | Implementation |
+|---------|----------------|
+| **Microservices** | Independent services |
+| **API Gateway** | Central entry point |
+| **Event-Driven** | Kafka communication |
+| **Service Discovery** | Eureka |
+| **DTO Pattern** | Request/Response DTOs |
+| **Repository Pattern** | Spring Data repositories |
 
-### AI Features
+---
 
-```http
-GET /api/ai/recommendations
-GET /api/ai/workout-plan
-GET /api/ai/diet-plan
+## 🔭 Observability
+
+```bash
+# Health check
+curl http://localhost:808X/actuator/health
 ```
 
 ---
 
-## 🏗 Architecture
+## 🤝 Contributing
 
-- Microservices Architecture  
-- API Gateway Pattern  
-- Service Discovery with Eureka  
-- Event-Driven Architecture using Kafka  
-- Secure Authentication with Keycloak + OAuth2  
-- Dockerized Deployment  
-
----
-
-## 🔮 Future Enhancements
-
-- AI chatbot for fitness guidance  
-- Wearable device integration  
-- Real-time notifications  
-- Kubernetes deployment  
-- CI/CD pipeline  
-
----
-
-## 👨‍💻 Author
-
-Developed by **Om Chaudhari** to demonstrate full-stack development, microservices, secure authentication, and AI integration using Java ecosystem.
-
----
+1. Fork the repository  
+2. Create your branch: `git checkout -b feature/your-feature`  
+3. Commit your changes: `git commit -m 'feat: add your feature'`  
+4. Push to the branch: `git push origin feature/your-feature`  
+5. Open a Pull Request  
